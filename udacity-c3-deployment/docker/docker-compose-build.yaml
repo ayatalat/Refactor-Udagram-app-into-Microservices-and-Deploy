@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: scheele/reverseproxy 
+  backend_user:
+    build:
+      context: ../../udacity-c3-restapi-user
+    image: ayatalat15/restapi-user
+  backend_feed:
+    build:
+      context: ../../udacity-c3-restapi-feed  
+    image: ayatalat15/restapi-feed
+  frontend:
+    build:
+      context: ../../udacity-c3-frontend  
+    image: ayatalat15/udgram-frontend
